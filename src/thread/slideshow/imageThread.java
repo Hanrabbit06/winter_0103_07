@@ -3,13 +3,20 @@ package thread.slideshow;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class imageThread extends Thread {
+public class ImageThread extends Thread {
 	JLabel lbl;
+	int time = 1000;
 	
-	public imageThread(JLabel lbl) {
+	public ImageThread(JLabel lbl) {
 		this.lbl = lbl;
 	}
 	
+	
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+
 	@Override
 	public void run() {
 		int i = 0;
